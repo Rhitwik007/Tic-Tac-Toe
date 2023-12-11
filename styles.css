@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav{
+    background-color: rgb(37,9,37);
+    color: antiquewhite;
+    height: 50px;
+    padding: 0px 12px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gameContainer{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover{
+    background-color: rgb(207, 220, 225);
+}
+
+.info{
+    font-size: 23px;
+}
+
+.gameInfo{
+    padding: 0;
+    font-family: 'Baloo Bhaina 2', cursive
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+#reset{
+    margin: 0px 15px;
+    padding: 0px 15px;
+    background: #99afb9;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Baloo Bhaina 2";
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.line{
+    background: red;
+    width: 0;
+    height: 3px;
+    position: absolute; /*so now this line will move relative to a parent whose position is made relative, here container is made relative*/
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 900px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+    grid-template-columns: repeat(3,20vw);
+    }
+}
